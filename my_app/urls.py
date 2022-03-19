@@ -1,7 +1,8 @@
 from django.contrib import admin
 from django.urls import path
-from .views import addUser
+from .views import addProvider, addUser
 
 urlpatterns = [
-    path('add', addUser, name = 'homepage')
+    path('add', addUser, name = 'homepage'),
+    path('addProvider', addProvider, name = 'Add Provider'),
 ]

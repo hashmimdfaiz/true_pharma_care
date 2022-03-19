@@ -10,4 +10,13 @@ class Doctor(models.Model):
     password = models.CharField(max_length=50)
 
 
-
+class Provider(models.Model):
+  user_id = models.CharField(max_length=20,primary_key=True,null=False,blank=False)
+  name = models.CharField(max_length=20)
+  speciality = models.CharField(max_length=50)
+  phone_number = models.CharField(max_length=20)
+  email_id = models.EmailField(max_length=50)
+  password = models.CharField(max_length=50)
+  typeOfProvider = models.CharField(max_length=50)
+  dateOfBirth = models.CharField(max_length=50)
+  gender = models.CharField(max_length=20)
